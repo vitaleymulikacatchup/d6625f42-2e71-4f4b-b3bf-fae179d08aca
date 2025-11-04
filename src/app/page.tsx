@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext } from "react";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
 import HeroBillboardCarousel from '@/components/sections/hero/HeroBillboardCarousel';
 import TextSplitAbout from '@/components/sections/about/TextSplitAbout';
@@ -13,11 +13,13 @@ import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
 import FooterBase from '@/components/sections/footer/FooterBase';
 import { Award, ChefHat, Crown, HelpCircle, Instagram, Linkedin, MessageSquare, Music, Star, Users, Wine, Globe } from 'lucide-react';
 
-const ThemeProvider = createContext(null);
-
 export default function Home() {
   return (
-    <div>
+    <ThemeProvider
+      defaultButtonVariant="text-stagger"
+      defaultTextAnimation="entrance-slide"
+      borderRadius="rounded"
+    >
       <div id="nav" data-section="nav">
         <NavbarStyleMinimal
           logoSrc="https://images.pexels.com/photos/34450955/pexels-photo-34450955.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
@@ -422,6 +424,6 @@ export default function Home() {
           onPrivacyClick={() => {}}
         />
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
