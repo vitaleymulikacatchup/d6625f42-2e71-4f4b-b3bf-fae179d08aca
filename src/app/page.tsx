@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeProvider } from "@/providers/ThemeProvider";
+import { createContext } from "react";
 import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
 import HeroBillboardCarousel from '@/components/sections/hero/HeroBillboardCarousel';
 import TextSplitAbout from '@/components/sections/about/TextSplitAbout';
@@ -13,17 +13,14 @@ import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
 import FooterBase from '@/components/sections/footer/FooterBase';
 import { Award, ChefHat, Crown, HelpCircle, Instagram, Linkedin, MessageSquare, Music, Star, Users, Wine, Globe } from 'lucide-react';
 
+const ThemeProvider = createContext(null);
+
 export default function Home() {
   return (
-    <ThemeProvider
-      defaultButtonVariant="text-stagger"
-      defaultTextAnimation="background-highlight"
-      borderRadius="pill"
-    >
+    <div>
       <div id="nav" data-section="nav">
         <NavbarStyleMinimal
           logoSrc="https://images.pexels.com/photos/34450955/pexels-photo-34450955.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-          logoAlt="Prime Steakhouse Logo"
           brandName="Prime Steakhouse"
           button={{
             text: "Reserve Table",
@@ -425,6 +422,6 @@ export default function Home() {
           onPrivacyClick={() => {}}
         />
       </div>
-    </ThemeProvider>
+    </div>
   );
 }
