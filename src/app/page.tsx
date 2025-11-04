@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeProvider } from "@/providers/ThemeProvider";
+import React from 'react';
 import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
 import HeroBillboardCarousel from '@/components/sections/hero/HeroBillboardCarousel';
 import TextSplitAbout from '@/components/sections/about/TextSplitAbout';
@@ -15,11 +15,7 @@ import { Award, ChefHat, Crown, HelpCircle, Instagram, Linkedin, MessageSquare, 
 
 export default function Home() {
   return (
-    <ThemeProvider
-      defaultButtonVariant="text-stagger"
-      defaultTextAnimation="entrance-slide"
-      borderRadius="rounded"
-    >
+    <React.Fragment>
       <div id="nav" data-section="nav">
         <NavbarStyleMinimal
           logoSrc="https://images.pexels.com/photos/34450955/pexels-photo-34450955.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
@@ -424,6 +420,6 @@ export default function Home() {
           onPrivacyClick={() => {}}
         />
       </div>
-    </ThemeProvider>
+    </React.Fragment>
   );
 }
