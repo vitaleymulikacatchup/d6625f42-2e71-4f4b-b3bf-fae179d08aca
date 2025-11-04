@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { ThemeProvider } from "@/providers/ThemeProvider";
+import { ThemeProvider } from "@/providers/theme/ThemeProvider";
 import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
 import HeroBillboardCarousel from '@/components/sections/hero/HeroBillboardCarousel';
 import TextSplitAbout from '@/components/sections/about/TextSplitAbout';
@@ -11,7 +11,7 @@ import TestimonialCardOne from '@/components/sections/testimonial/TestimonialCar
 import FaqSplitMedia from '@/components/sections/faq/FaqSplitMedia';
 import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
 import FooterBase from '@/components/sections/footer/FooterBase';
-import { Award, ChefHat, Crown, Globe, HelpCircle, Instagram, Linkedin, MessageSquare, Music, Star, Users, Wine } from 'lucide-react';
+import { Award, ChefHat, Crown, HelpCircle, Instagram, Linkedin, MessageSquare, Music, Star, Users, Wine } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -188,7 +188,7 @@ export default function Home() {
                   url: "https://instagram.com/chefmarcus"
                 },
                 {
-                  icon: Globe,
+                  icon: Linkedin,
                   url: "https://chefmarcus.com"
                 }
               ]
